@@ -17,6 +17,10 @@ public class Main {
 			numbers[i] = in.nextInt();
 		}
 		
+		BubbleSort bs = new BubbleSort(numbers);
+		bs.print();
+		bs.sort();
+		bs.print();
 
 	}
 
