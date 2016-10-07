@@ -17,7 +17,7 @@ public class BubbleSort {
 					numbers[startIndex] = temp;
 					numberOfOperations++;
 				}
-				
+				numberOfOperations++;
 			}
 			numberOfOperations++;
 			
