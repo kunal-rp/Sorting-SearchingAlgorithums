@@ -17,10 +17,19 @@ public class Main {
 			numbers[i] = in.nextInt();
 		}
 		
+		/*
+		System.out.println("------------Bubble Sort--------------");
 		BubbleSort bs = new BubbleSort(numbers);
 		bs.print();
 		bs.sort();
 		bs.print();
+		*/
+		
+		System.out.println("------------Linear Insertion Sort--------------");
+		LinearInsertion li = new LinearInsertion(numbers);
+		li.print();
+		li.sort();
+		li.print();
 
 	}
 
