@@ -1,14 +1,8 @@
 
 public class LinearInsertion {
 
-	int[] numbers;
-	
-	public LinearInsertion(int[] numbers){
-		this.numbers = numbers;
-	}
-	
-	
-	public void sort(){
+
+	public int[] sort(int[] numbers){
 		int numberOfOperations = 0;
 		for(int i = 0; i < numbers.length-1; i++){
 			int temp = numbers[i+1];
@@ -23,13 +17,9 @@ public class LinearInsertion {
 			
 		}
 		System.out.println("Number Of Operations: "+numberOfOperations);
+		return numbers;
 	}
 	
-	public void print(){
-		for(int i = 0; i < numbers.length; i++){
-			System.out.print(numbers[i]+ " ");
-		}
-		System.out.println();
-	}
+	
 	
 }

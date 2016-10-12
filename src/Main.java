@@ -11,35 +11,41 @@ public class Main {
 		
 		Random rand = new Random();
 		
-		int[] origional = new int[rand.nextInt(10)];
+		int[] origional = new int[rand.nextInt(100)];
 		for(int i = 0; i < origional.length; i++){
 			origional[i] = (int) rand.nextInt(300);
 		}
 		
 		
+		BubbleSort bs = new BubbleSort();
+		LinearInsertion li = new LinearInsertion();
+		
 		
 		System.out.println("------------Bubble Sort--------------");
-		BubbleSort bs = new BubbleSort(origional);
-		bs.print();
-		bs.sort();
-		bs.print();
+		print(origional);
+		print(bs.sort(origional));
 		
 		for(int i = 0; i < origional.length; i++){
-			origional[i] = origional.length-i;//(int) rand.nextInt(300);
+			origional[i] = (int) rand.nextInt(300);
 		}
 		
-		System.out.println("------------Linear Insertion Sort--------------");
-		LinearInsertion li = new LinearInsertion(origional);
-		li.print();
-		li.sort();
-		li.print();
+		System.out.println("------------Linear Insertion Sort--------------");		
+		print(origional);
+		print(li.sort(origional));
 		
 		
 		System.out.println("------------Binary search--------------");
-		BinarySearch bin_search = new BinarySearch(origional);
+		BinarySearch bin_search = new BinarySearch();
 		System.out.print("Number to search:");
-		System.out.println(bin_search.search(0, origional.length-1, in.nextInt()));
+		System.out.println(bin_search.search(origional,0, origional.length-1, in.nextInt()));
 
+	}
+	
+	public static void print(int[] numbers){
+		for(int i = 0; i < numbers.length; i++){
+			System.out.print(numbers[i]+ " ");
+		}
+		System.out.println();
 	}
 
 }

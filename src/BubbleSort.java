@@ -1,13 +1,8 @@
 
 public class BubbleSort {
 	
-	int[] numbers;
 	
-	public BubbleSort(int[] numbers){
-		this.numbers = numbers;
-	}
-	
-	public void sort(){
+	public int[] sort(int[] numbers){
 		int numberOfOperations = 0;
 		for(int endIndex = numbers.length; endIndex >0; endIndex-- ){
 			for(int startIndex = 0; startIndex <endIndex-1; startIndex++ ){
@@ -24,15 +19,11 @@ public class BubbleSort {
 			
 		}
 		System.out.println("Number of Operations:"+ numberOfOperations);
+		return numbers;
 		
 	}
 	
-	public void print(){
-		for(int i = 0; i < numbers.length; i++){
-			System.out.print(numbers[i]+ " ");
-		}
-		System.out.println();
-	}
+	
 	
 	
 	
