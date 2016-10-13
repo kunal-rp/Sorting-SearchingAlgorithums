@@ -11,9 +11,9 @@ public class Main {
 		
 		Random rand = new Random();
 		
-		int[] origional = new int[rand.nextInt(100)];
+		int[] origional = new int[rand.nextInt(1000)];
 		for(int i = 0; i < origional.length; i++){
-			origional[i] = (int) rand.nextInt(300);
+			origional[i] = (int) rand.nextInt(10000);
 		}
 		
 		
