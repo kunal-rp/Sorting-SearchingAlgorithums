@@ -11,9 +11,11 @@ public class Main {
 		
 		Random rand = new Random();
 		
-		int[] origional = new int[rand.nextInt(1000)];
-		for(int i = 0; i < origional.length; i++){
-			origional[i] = (int) rand.nextInt(10000);
+		int[] origional1 = new int[rand.nextInt(1000)];
+		int[] origional2 = new int[origional1.length];
+		for(int i = 0; i < origional1.length; i++){
+			origional1[i] = (int) rand.nextInt(10000);
+			origional2[i] = origional1[i];
 		}
 		
 		
@@ -22,22 +24,22 @@ public class Main {
 		
 		
 		System.out.println("------------Bubble Sort--------------");
-		print(origional);
-		print(bs.sort(origional));
+		print(origional1);
+		System.out.println("Size: "+ origional1.length);
+		print(bs.sort(origional1));
 		
-		for(int i = 0; i < origional.length; i++){
-			origional[i] = (int) rand.nextInt(300);
-		}
+		
 		
 		System.out.println("------------Linear Insertion Sort--------------");		
-		print(origional);
-		print(li.sort(origional));
+		print(origional2);
+		System.out.println("Size: "+ origional2.length);
+		print(li.sort(origional2));
 		
 		
 		System.out.println("------------Binary search--------------");
 		BinarySearch bin_search = new BinarySearch();
 		System.out.print("Number to search:");
-		System.out.println(bin_search.search(origional,0, origional.length-1, in.nextInt()));
+		System.out.println(bin_search.search(origional2,0, origional2.length-1, in.nextInt()));
 
 	}
 	
